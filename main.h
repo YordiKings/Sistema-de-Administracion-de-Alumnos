@@ -121,7 +121,7 @@ void limpiarbuffer() {
 int sacarMejorPromedio(VariableAlumno* alumno, int* nAlumnos) {
 	int i = 0, max = 0;
 	for (; i < *nAlumnos; i++) {
-		if (alumno[max].promedio > alumno[i].promedio) {
+		if (alumno[max].promedio < alumno[i].promedio) {
 			max = i;
 		}
 	}
@@ -131,7 +131,7 @@ int sacarPeorPromedio(VariableAlumno* alumno, int* nAlumnos) {
 
 	int i = 0, min = 0;
 	for (; i < *nAlumnos; i++) {
-		if (alumno[min].promedio <  alumno[i].promedio) {
+		if (alumno[min].promedio >  alumno[i].promedio) {
 			min = i;
 		}
 	}
@@ -140,7 +140,7 @@ int sacarPeorPromedio(VariableAlumno* alumno, int* nAlumnos) {
 int sacarMejorCalificacion(VariableAlumno* alumno, int* nAlumnos, int* opcion) {
 	int i = 0, max = 0;
 	for (; i < *nAlumnos; i++) {
-		if (alumno[max].calificaciones[*opcion] > alumno[i].calificaciones[*opcion]) {
+		if (alumno[max].calificaciones[*opcion] < alumno[i].calificaciones[*opcion]) {
 			max = i;
 		}
 	}
@@ -149,7 +149,7 @@ int sacarMejorCalificacion(VariableAlumno* alumno, int* nAlumnos, int* opcion) {
 int sacarPeorCalificacion(VariableAlumno* alumno, int* nAlumnos, int* opcion) {
 	int i = 0, min = 0;
 	for (; i < *nAlumnos; i++) {
-		if (alumno[min].calificaciones[*opcion] <  alumno[i].calificaciones[*opcion]) {
+		if (alumno[min].calificaciones[*opcion] >  alumno[i].calificaciones[*opcion]) {
 			min = i;
 		}
 	}
